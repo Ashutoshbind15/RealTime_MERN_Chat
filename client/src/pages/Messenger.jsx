@@ -79,7 +79,11 @@ const Messenger = () => {
     //setting the currently sent msg randomly instead of fetching back correct later
     setMsgs((prev) => [
       ...prev,
-      { _id: Math.random().toString(), text: input, sender: user._id },
+      {
+        _id: Math.random().toString(),
+        text: input,
+        sender: { _id: user.user._id, name: user.user.name },
+      },
     ]);
 
     socket.current.emit("message", input, receipients, currentRoom, user);

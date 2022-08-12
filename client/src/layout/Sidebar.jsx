@@ -181,8 +181,18 @@ const Sidebar = ({
           ))}
         </div>
         <div className="lower flex flex-col items-start">
-          <button onClick={() => setIsAddUser(true)}>Add Friends</button>
-          <button onClick={() => setIsAddRoom(true)}>Add Room</button>
+          <button
+            className="sec w-full pr-2 rounded-sm"
+            onClick={() => setIsAddUser(true)}
+          >
+            Add Friends
+          </button>
+          <button
+            className="prim w-full pr-2 rounded-sm"
+            onClick={() => setIsAddRoom(true)}
+          >
+            Add Room
+          </button>
         </div>
       </div>
     );

@@ -4,6 +4,8 @@ import { useState } from "react";
 import AuthContext from "../context/AuthContext";
 
 const ChatRoom = ({ submissionHandler, msgs, users }) => {
+  console.log(msgs);
+
   const { user } = useContext(AuthContext);
 
   const [input, setInp] = useState("");
@@ -15,7 +17,7 @@ const ChatRoom = ({ submissionHandler, msgs, users }) => {
   };
 
   return (
-    <div className="w-4/5">
+    <div className="w-4/5 px-4">
       <div className="upper">
         {users.length ? (
           <div className="flex sec items-center justify-center p-3 text-xl">
